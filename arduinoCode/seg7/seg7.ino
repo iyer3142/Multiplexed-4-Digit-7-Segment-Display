@@ -168,7 +168,6 @@ void pickDigit(int digit) {
     default: digitalWrite(DIG4, HIGH); break;
   }
 }
-
 void sevenSegment(int number) {
   unsigned char thousands = int (number/1000);
   unsigned char hundreds  = int ((number/100)%10);
@@ -178,22 +177,18 @@ void sevenSegment(int number) {
   chooseDigit(thousands);
   pickDigit(1);
   delay(time);
-
   
   chooseDigit(hundreds);
   pickDigit(2);
   delay(time);
-
   
   chooseDigit(tens);
   pickDigit(3);
   delay(time);
 
-  
   chooseDigit(ones);
   pickDigit(4);
-  delay(time);
-  
+  delay(time); 
 }
 void loop() {
   sevenSegment(3142);  
